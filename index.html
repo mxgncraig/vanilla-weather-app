@@ -18,52 +18,55 @@
     <title>Weather App</title>
   </head>
   <body>
-    <button
-      type="button"
-      class="btn btn-outline-light"
-      id="current-location-btn"
-    >
-      Find your current location...
-    </button>
-    <p>Current time and date</p>
-    <div class="search-engine">
-      <form id="form">
-        <div class="col-9">
-          <input
-            class="form-control"
-            input
-            type="text"
-            id="city"
-            placeholder="Search for a new city..."
-          />
+    <div class="container">
+      <div class="weather-application">
+        <button
+          type="button"
+          class="btn btn-outline-light"
+          id="current-location-btn"
+        >
+          Find your current location...
+        </button>
+        <p>Current time and date</p>
+        <div class="search-engine">
+          <form id="form">
+            <div class="col-9">
+              <input
+                class="form-control"
+                input
+                type="text"
+                id="city"
+                placeholder="Search for a new city..."
+              />
+            </div>
+          </form>
         </div>
-      </form>
-    </div>
-    <h1>Coolangatta</h1>
-    <div class="container text-center">
-      <div class="row">
-        <div class="col">Humidity:</div>
-        <div class="col">Wind:</div>
-        <div class="col">Rainfall:</div>
+        <h1>Coolangatta</h1>
+
+        <div class="row">
+          <div class="col">Humidity:</div>
+          <div class="col">Wind:</div>
+          <div class="col">Rainfall:</div>
+        </div>
+        <h2><i class="fa-solid fa-cloud-bolt"></i>Current temperature</h2>
+        <p class="upcoming-days">The next 5 days...</p>
+
+        <div class="row row-cols-5">
+          <div class="col">Mon</div>
+          <div class="col">Tues</div>
+          <div class="col">Wed</div>
+          <div class="col">Thu</div>
+          <div class="col">Fri</div>
+          <div class="col"><i class="fa-solid fa-cloud"></i></div>
+          <div class="col"><i class="fa-solid fa-sun"></i></div>
+          <div class="col"><i class="fa-solid fa-sun"></i></div>
+          <div class="col"><i class="fa-solid fa-cloud-showers-heavy"></i></div>
+          <div class="col"><i class="fa-solid fa-cloud-showers-heavy"></i></div>
+        </div>
+
+        <p>Current weather warnings: None</p>
       </div>
     </div>
-    <h2><i class="fa-solid fa-cloud-bolt"></i>Current temperature</h2>
-    <p class="upcoming-days">The next 5 days...</p>
-    <div class="container text-center">
-      <div class="row row-cols-5">
-        <div class="col">Mon</div>
-        <div class="col">Tues</div>
-        <div class="col">Wed</div>
-        <div class="col">Thu</div>
-        <div class="col">Fri</div>
-        <div class="col"><i class="fa-solid fa-cloud"></i></div>
-        <div class="col"><i class="fa-solid fa-sun"></i></div>
-        <div class="col"><i class="fa-solid fa-sun"></i></div>
-        <div class="col"><i class="fa-solid fa-cloud-showers-heavy"></i></div>
-        <div class="col"><i class="fa-solid fa-cloud-showers-heavy"></i></div>
-      </div>
-    </div>
-    <p>Current weather warnings: None</p>
     <script href="src/script.js"></script>
   </body>
 </html>
