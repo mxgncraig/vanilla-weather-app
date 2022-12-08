@@ -27,7 +27,7 @@
         >
           Find your current location...
         </button>
-        <p>Current time and date</p>
+        <p><span class="time-date">Current time and date</span></p>
         <div class="search-engine">
           <form id="form">
             <div class="col-9">
@@ -42,29 +42,34 @@
           </form>
         </div>
         <h1>Coolangatta</h1>
-
-        <div class="row">
-          <div class="col">Humidity:</div>
-          <div class="col">Wind:</div>
-          <div class="col">Rainfall:</div>
+        <div class="weather-variables">
+          <div class="row">
+            <div class="col">Humidity:</div>
+            <div class="col">Wind:</div>
+            <div class="col">Rainfall:</div>
+          </div>
         </div>
-        <h2><i class="fa-solid fa-cloud-bolt"></i>Current temperature</h2>
+        <h2><i class="fa-solid fa-cloud-bolt"></i> 0°C</h2>
         <p class="upcoming-days">The next 5 days...</p>
-
-        <div class="row row-cols-5">
-          <div class="col">Mon</div>
-          <div class="col">Tues</div>
-          <div class="col">Wed</div>
-          <div class="col">Thu</div>
-          <div class="col">Fri</div>
-          <div class="col"><i class="fa-solid fa-cloud"></i></div>
-          <div class="col"><i class="fa-solid fa-sun"></i></div>
-          <div class="col"><i class="fa-solid fa-sun"></i></div>
-          <div class="col"><i class="fa-solid fa-cloud-showers-heavy"></i></div>
-          <div class="col"><i class="fa-solid fa-cloud-showers-heavy"></i></div>
+        <div class="next-five-days">
+          <div class="row row-cols-5">
+            <div class="col">Mon</div>
+            <div class="col">Tues</div>
+            <div class="col">Wed</div>
+            <div class="col">Thu</div>
+            <div class="col">Fri</div>
+            <div class="col"><i class="fa-solid fa-cloud"></i></div>
+            <div class="col"><i class="fa-solid fa-sun"></i></div>
+            <div class="col"><i class="fa-solid fa-sun"></i></div>
+            <div class="col">
+              <i class="fa-solid fa-cloud-showers-heavy"></i>
+            </div>
+            <div class="col">
+              <i class="fa-solid fa-cloud-showers-heavy"></i>
+            </div>
+          </div>
         </div>
-
-        <p>Current weather warnings: None</p>
+        <p class="warnings">Current weather warnings: None</p>
       </div>
     </div>
     <script href="src/script.js"></script>

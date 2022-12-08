@@ -1,0 +1,52 @@
+body {
+  font-family: "Times New Roman", Times, serif;
+}
+.weather-application {
+  max-width: 600px;
+  border: 1px solid #dcdcdc;
+  border-radius: 20px;
+  padding: 50px;
+  margin: 30px auto;
+}
+.time-date {
+  text-align: right;
+  position: relative;
+  color: #cadefc;
+  font-size: 15px;
+}
+h1 {
+  color: #c3bef0;
+  font-size: 30px;
+}
+h2 {
+  color: #c3bef0;
+  padding: 20px;
+  font-size: 5px;
+}
+.search-engine {
+  padding-bottom: 10px;
+}
+.weather-variables {
+  font-size: 10px;
+  max-width: 200px;
+  color: #cadefc;
+}
+.upcoming-days {
+  text-align: center;
+  color: #cadefc;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+.next-five-days {
+  text-align: center;
+  border: 1px solid #dcdcdc;
+  border-radius: 20px;
+  padding: 20px;
+  color: #c3bef0;
+}
+.warnings {
+  text-align: center;
+  font-size: 10px;
+  margin-top: 20px;
+  color: red;
+}
