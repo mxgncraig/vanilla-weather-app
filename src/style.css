@@ -1,5 +1,5 @@
 body {
-  font-family: "Times New Roman", Times, serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .weather-application {
   max-width: 600px;
@@ -11,17 +11,36 @@ body {
 .time-date {
   text-align: right;
   position: relative;
+  top: -30px;
   color: #cadefc;
   font-size: 15px;
 }
+.location-button {
+  text-align: right;
+  position: relative;
+  top: -5px;
+  color: #cadefc;
+  font-size: 15px;
+  border: 1px solid #cadefc;
+  border-radius: 5px;
+  background-color: white;
+  transition: 250ms;
+}
+hover.location-button {
+  color: #c3bef0;
+  background-color: #cadefc;
+  cursor: pointer;
+}
 h1 {
   color: #c3bef0;
-  font-size: 30px;
+  font-size: 40px;
+  font-weight: 700;
 }
 h2 {
   color: #c3bef0;
   padding: 20px;
-  font-size: 5px;
+  font-size: 50px;
+  font-weight: 700;
 }
 .search-engine {
   padding-bottom: 10px;
@@ -34,11 +53,12 @@ h2 {
 .upcoming-days {
   text-align: center;
   color: #cadefc;
-  font-size: 15px;
+  font-size: 10px;
   margin-bottom: 5px;
 }
 .next-five-days {
   text-align: center;
+  font-size: 15px;
   border: 1px solid #dcdcdc;
   border-radius: 20px;
   padding: 20px;
