@@ -38,15 +38,18 @@
             </div>
           </form>
         </div>
-        <h1>Coolangatta</h1>
+        <h1 id="city-name">Coolangatta</h1>
         <div class="weather-variables">
           <div class="row">
-            <div class="col">Humidity:</div>
-            <div class="col">Wind:</div>
-            <div class="col">Rainfall:</div>
+            <div class="col">Humidity: <span id="humidity">0</span>%</div>
+            <div class="col">Wind:<span id="wind">0</span>kmph</div>
+            <div class="col">Feels like:<span id="feels-like"> 0</span>°C</div>
           </div>
         </div>
-        <h2><i class="fa-solid fa-cloud-bolt"></i> 0°C</h2>
+        <h2>
+          <i class="fa-solid fa-cloud-bolt"></i
+          ><span id="temperature"> 0</span>°C
+        </h2>
         <p class="upcoming-days">The next 5 days...</p>
         <div class="next-five-days">
           <div class="row row-cols-5">
