@@ -1,3 +1,16 @@
+let timeElement = document.querySelector(".time-date");
+let now = new Date();
+let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+let day = days[now.getDay()];
+let hours = now.getHours();
+if (hours < 10) {
+  hours = `0{hours}`;
+}
+let minutes = now.getMinutes();
+if (minutes < 10) {
+  minutes = `0{minutes}`;
+}
+timeElement.innerHTML = `${day} ${hours}:${minutes}`;
 function showTemperature(response) {
   console.log(response.data.temperature);
   let cityElement = document.querySelector("#city-name");
