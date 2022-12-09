@@ -12,7 +12,6 @@ if (minutes < 10) {
 }
 timeElement.innerHTML = `${day} ${hours}:${minutes}`;
 function showTemperature(response) {
-  console.log(response.data.temperature);
   let cityElement = document.querySelector("#city-name");
   let temperatureElement = document.querySelector("#temperature");
   let humidityElement = document.querySelector("#humidity");
