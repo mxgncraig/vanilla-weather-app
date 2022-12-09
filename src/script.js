@@ -1,6 +1,6 @@
 let timeElement = document.querySelector(".time-date");
 let now = new Date();
-let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 let day = days[now.getDay()];
 let hours = now.getHours();
 if (hours < 10) {
