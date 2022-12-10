@@ -12,6 +12,7 @@ if (minutes < 10) {
 }
 
 timeElement.innerHTML = `${day} ${hours}:${minutes}`;
+
 function showTemperature(response) {
   let cityElement = document.querySelector("#city-name");
   let temperatureElement = document.querySelector("#temperature");
@@ -29,8 +30,17 @@ function showTemperature(response) {
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
 }
+function search(city) {
+  let apiKey = "823db6e133aat4d41o6f0ce4dc3ba6ce";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showTemperature);
+}
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInput = document.querySelector("#city-search");
+  search(cityInput.value);
+}
+search("Brisbane");
 
-let apiKey = "823db6e133aat4d41o6f0ce4dc3ba6ce";
-let city = "Tokyo";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-axios.get(apiUrl).then(showTemperature);
+let form = document.querySelector("#form");
+form.addEventListener("submit", handleSubmit);
