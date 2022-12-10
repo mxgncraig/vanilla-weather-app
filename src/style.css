@@ -12,8 +12,12 @@ h2 {
   font-size: 50px;
   font-weight: 700;
 }
+#current-icon {
+  max-width: 100px;
+  margin-left: -40px;
+}
 #temperature {
-  margin-left: 15px;
+  margin-left: -15px;
 }
 .weather-application {
   max-width: 600px;
