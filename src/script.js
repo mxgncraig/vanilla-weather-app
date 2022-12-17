@@ -89,30 +89,6 @@ function handleSubmit(event) {
   let cityInput = document.querySelector("#city-search");
   search(cityInput.value);
 }
-function farConversion(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  let farTemperature = (celciusTemp * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(farTemperature);
-  celLink.classList.remove("active");
-  farLink.classList.add("active");
-}
-function celConversion(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(celciusTemp);
-  celLink.classList.add("active");
-  farLink.classList.remove("active");
-}
-
-let celciusTemp = null;
-
-let farLink = document.querySelector("#far");
-farLink.addEventListener("click", farConversion);
-
-let celLink = document.querySelector("#cel");
-celLink.addEventListener("click", celConversion);
-
 let form = document.querySelector("#form");
 form.addEventListener("submit", handleSubmit);
 
