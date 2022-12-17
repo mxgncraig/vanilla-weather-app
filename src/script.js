@@ -32,36 +32,48 @@ function showTemperature(response) {
   );
   showUpcomingForecast(response.data.city);
 }
-function showUpcomingForecast() {
+function showUpcomingForecast(cityName) {
   let apiKey = "823db6e133aat4d41o6f0ce4dc3ba6ce";
-  let city = "london";
-  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${cityName}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
+function formatDays(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[day];
+}
 function displayForecast(response) {
-  console.log(response.data.daily);
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
-  let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
   let forecastHTML = `<div class="row">`;
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `<div class="col">
-            <div class="upcoming-forecast-days">${day}</div>
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 5) {
+      forecastHTML =
+        forecastHTML +
+        `<div class="col">
+            <div class="upcoming-forecast-days">${formatDays(
+              forecastDay.time
+            )}</div>
             <div class="upcoming-forecast-icons">
               <img
-                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-night.png"
+                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
+                  forecastDay.condition.icon
+                }.png"
                 alt=".."
                 width="36"
               />
             </div>
             <div class="upcoming-forecast-temps">
-              <span class="upcoming-forecast-temps-max">23</span>/<span
+              <span class="upcoming-forecast-temps-max">${Math.round(
+                forecastDay.temperature.maximum
+              )}°</span>/<span
                 class="upcoming-forecast-temp-min"
-                >24</span
+                >${Math.round(forecastDay.temperature.minimum)}°</span
               >
             </div>
           </div>`;
+    }
   });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
