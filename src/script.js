@@ -33,8 +33,13 @@ function showTemperature(response) {
 }
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
-  forecastElement.innerHTML = `<div class="row-col">
-            <div class="upcoming-forecast-days">Mon</div>
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col">
+            <div class="upcoming-forecast-days">${day}</div>
             <div class="upcoming-forecast-icons">
               <img
                 src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-night.png"
@@ -49,6 +54,9 @@ function displayForecast() {
               >
             </div>
           </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
 function search(city) {
   let apiKey = "823db6e133aat4d41o6f0ce4dc3ba6ce";
