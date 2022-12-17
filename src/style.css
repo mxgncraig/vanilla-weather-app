@@ -76,11 +76,19 @@ hover.location-button {
 }
 .next-five-days {
   text-align: center;
-  font-size: 15px;
   border: 1px solid #dcdcdc;
   border-radius: 20px;
   padding: 20px;
+}
+.upcoming-forecast-days {
   color: #c3bef0;
+  font-size: 12px;
+}
+.upcoming-forecast-icons {
+}
+.upcoming-forecast-temps {
+  color: #cadefc;
+  font-size: 8px;
 }
 .warnings {
   text-align: center;
